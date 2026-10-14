@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página web - CETAC 22</title>
+    <style>
+        body{ background:#0a0a12; color:white; font-family:Arial; margin:0; display:grid; grid-template-areas:"header header" "main aside" "footer footer"; grid-template-columns:3fr 1fr; }
+        header{ grid-area:header; background:linear-gradient(90deg, #000, #0ea5e9, #7c3aed); padding:1rem; border-bottom:3px solid #7c3aed; }
+        main{ grid-area:main; padding:1rem; }
+        section{ background:#151525; padding:1rem; border-radius:12px; border-left:4px solid #0ea5e9; }
+        
+        /* FOTO Y VIDEO */
+        img{ width:100%; border-radius:12px; border:2px solid #0ea5e9; }
+        iframe{ width:100%; height:315px; border-radius:12px; border:2px solid #7c3aed; margin-top:10px; }
+
+        /* VENTANITA DE AL LADO - AZUL Y MORADO */
+        aside{ 
+            grid-area:aside; 
+            background: linear-gradient(180deg, #0ea5e9, #7c3aed); 
+            color:white; 
+            padding:1rem; 
+            margin:1rem; 
+            border-radius:12px; 
+            border:2px solid white; 
+            box-shadow: 0 0 15px #0ea5e9;
+        }
+        footer{ grid-area:footer; background:black; color:#a78bfa; text-align:center; padding:1rem; border-top:2px solid #0ea5e9; }
+        @media(max-width:768px){ body{ grid-template-areas:"header" "main" "aside" "footer"; grid-template-columns:1fr } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi página web - CETAC 22</h1>
+    </header>
+
+    <main>
+        <section id="multimedia">
+            <h2>Multimedia</h2>
+            
+            <figure>
+                <img src="leon.jpg" alt="León">
+                <figcaption style="text-align:center; color:#a78bfa;">León - CETAC 22</figcaption>
+            </figure>
+
+            <h3>Video de YouTube</h3>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Barra lateral</h3>
+        <p>Esta es la ventanita de al lado con colores azul y morado.</p>
+        <details>
+            <summary>Ver más</summary>
+            <p>Contenido desplegable de la práctica.</p>
+        </details>
+    </aside>
+
+    <footer><p>&copy; 2026 CETAC 22</p></footer>
+</body>
+</html>
